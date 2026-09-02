@@ -64,10 +64,12 @@ Images are refreshed automatically from NIWA web services.
 <div class="card">
 <h2>RONI 30-day Year-to-Year Comparison</h2>
 
-<a href="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.png" download="RONI_30_days_year_to_year_comparison.png">
+<a href="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.png" target="_blank">
     <img
       src="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.png"
+      class="card-image"
       alt="RONI 30-day Year-to-Year Comparison"
+      onclick="downloadImage(this.src, this.src.split('/').pop())"
       style="width:100%; height:auto;"
     >
   </a>
@@ -127,6 +129,33 @@ const timestamp = new Date().getTime();
 document.querySelectorAll("img").forEach(img => {
     img.src += "?v=" + timestamp;
 });
+</script>
+
+<script>
+async function downloadImage(url, filename) {
+  try {
+    const response = await fetch(url);
+    const blob = await response.blob();
+
+    const blobUrl = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = blobUrl;
+    a.download = filename;
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    URL.revokeObjectURL(blobUrl);
+
+  } catch (error) {
+    console.error("Download failed:", error);
+
+    // Fallback: open image in a new tab
+    window.open(url, "_blank");
+  }
+}
 </script>
 
 </body>
