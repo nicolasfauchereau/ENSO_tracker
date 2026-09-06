@@ -1,162 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
 
-<title>2026 / 2027 El Ni&ntilde;o dashboard</title>
+  <title>2026 / 2027 El Ni&ntilde;o dashboard</title>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    margin: 0;
-    padding: 20px;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+    }
 
-h1 {
-    text-align: center;
-    color: #003366;
-}
+    h1 {
+      text-align: center;
+      color: #003366;
+    }
 
-.container {
-    max-width: 1400px;
-    margin: auto;
-}
+    .container {
+      max-width: 1400px;
+      margin: auto;
+    }
 
-.card {
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-}
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.card h2 {
-    margin-top: 0;
-    color: #004080;
-}
+    .card h2 {
+      margin-top: 0;
+      color: #004080;
+    }
 
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
 
-.updated {
-    text-align: center;
-    color: #666;
-    margin-bottom: 20px;
-}
-</style>
+    .updated {
+      text-align: center;
+      color: #666;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-<h1>2026 / 2027 El Nino dashboard</h1>
+    <h1>2026 / 2027 El Ni&ntilde;o dashboard</h1>
 
-<div class="updated">
-Images are refreshed automatically from NIWA web services.
-</div>
+    <div class="updated">
+      Images and data are refreshed automatically from NIWA web services.
+    </div>
 
-<div class="card">
-<h2>RONI 30-day Year-to-Year Comparison</h2>
+    <div class="card">
+      <h2>RONI 30-day Year-to-Year Comparison</h2>
 
-<a href="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.png" target="_blank">
-    <img
-      src="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.png"
-      class="card-image"
-      alt="RONI 30-day Year-to-Year Comparison"
-      onclick="downloadImage(this.src, this.src.split('/').pop())"
-      style="width:100%; height:auto;"
-    >
-  </a>
-</div>
+      <a href="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.png" target="_blank">
+        <img src="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.png" class="card-image"
+          alt="RONI 30-day Year-to-Year Comparison" onclick="downloadImage(this.src, this.src.split('/').pop())"
+          style="width:100%; height:auto;">
+      </a>
+    </div>
 
-<div class="card">
-<h2>RONI and TONI time series</h2>
+  <a href="https://webstatic.niwa.co.nz/sco/RONI_30_days_year_to_year_comparison.csv" target="_blank">
+      <button>Download CSV file</button>
+    </a>
+  </div>
 
-  <a href="https://webstatic.niwa.co.nz/sco/NINO_3.4_combined.png" target="_blank">
-    <img
-      src="https://webstatic.niwa.co.nz/sco/NINO_3.4_combined.png"
-      alt="RONI and TONI time series (1, 7, 30 and 90 days)"
-      style="width:100%; height:auto;"
-    >
-  </a>
-</div>
+  <div class="card">
+    <h2>RONI and TONI time series</h2>
 
-<div class="card">
-<h2>Global OISST Anomaly (1 Day)</h2>
-  <a href="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_1days_latest.png" target="_blank">
-    <img
-      src="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_1days_latest.png"
-      alt="Global OISST Anomaly (1 Day)"
-      style="width:100%; height:auto;"
-    >
-  </a>
-</div>
+    <a href="https://webstatic.niwa.co.nz/sco/NINO_3.4_combined.png" target="_blank">
+      <img src="https://webstatic.niwa.co.nz/sco/NINO_3.4_combined.png"
+        alt="RONI and TONI time series (1, 7, 30 and 90 days)" style="width:100%; height:auto;">
+    </a>
+  </div>
 
-<div class="card">
-<h2>Global OISST Anomaly (15 Days)</h2>
-  <a href="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_15days_latest.png" target="_blank">
-    <img
-      src="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_15days_latest.png"
-      alt="Global OISST Anomaly (15 Days)"
-      style="width:100%; height:auto;"
-    >
-  </a>
-</div>
+  <div class="card">
+    <h2>Global OISST Anomaly (1 Day)</h2>
+    <a href="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_1days_latest.png" target="_blank">
+      <img src="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_1days_latest.png"
+        alt="Global OISST Anomaly (1 Day)" style="width:100%; height:auto;">
+    </a>
+  </div>
 
-<div class="card">
-  <h2>Global OISST Anomaly (30 Days)</h2>
+  <div class="card">
+    <h2>Global OISST Anomaly (15 Days)</h2>
+    <a href="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_15days_latest.png" target="_blank">
+      <img src="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_15days_latest.png"
+        alt="Global OISST Anomaly (15 Days)" style="width:100%; height:auto;">
+    </a>
+  </div>
 
-  <a href="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_30days_latest.png" target="_blank">
-    <img
-      src="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_30days_latest.png"
-      alt="Global OISST Anomaly (30 Days)"
-      style="width:100%; height:auto;"
-    >
-  </a>
-</div>
+  <div class="card">
+    <h2>Global OISST Anomaly (30 Days)</h2>
 
-</div>
+    <a href="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_30days_latest.png" target="_blank">
+      <img src="https://webstatic.niwa.co.nz/sco/Global_OISST_anomalies_30days_latest.png"
+        alt="Global OISST Anomaly (30 Days)" style="width:100%; height:auto;">
+    </a>
+  </div>
 
-<script>
-const timestamp = new Date().getTime();
+  </div>
 
-document.querySelectorAll("img").forEach(img => {
-    img.src += "?v=" + timestamp;
-});
-</script>
+  <script>
+    const timestamp = new Date().getTime();
 
-<script>
-async function downloadImage(url, filename) {
-  try {
-    const response = await fetch(url);
-    const blob = await response.blob();
+    document.querySelectorAll("img").forEach(img => {
+      img.src += "?v=" + timestamp;
+    });
+  </script>
 
-    const blobUrl = URL.createObjectURL(blob);
+  <script>
+    async function downloadImage(url, filename) {
+      try {
+        const response = await fetch(url);
+        const blob = await response.blob();
 
-    const a = document.createElement('a');
-    a.href = blobUrl;
-    a.download = filename;
+        const blobUrl = URL.createObjectURL(blob);
 
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = filename;
 
-    URL.revokeObjectURL(blobUrl);
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
 
-  } catch (error) {
-    console.error("Download failed:", error);
+        URL.revokeObjectURL(blobUrl);
 
-    // Fallback: open image in a new tab
-    window.open(url, "_blank");
-  }
-}
-</script>
+      } catch (error) {
+        console.error("Download failed:", error);
+
+        // Fallback: open image in a new tab
+        window.open(url, "_blank");
+      }
+    }
+  </script>
 
 </body>
+
 </html>
